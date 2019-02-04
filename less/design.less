@@ -505,6 +505,11 @@ body {
                 }
             }
         }
+        &__form {
+            &__top {
+                
+            }
+        }
     }
 }
 
@@ -694,9 +699,88 @@ body {
                     }
                 }
             }
-            &__year {
+            &__day {
                 .item {
-                    width:20.99236641221374%; /* 220 1048 */
+                    height:56px;
+                    .flex-display(@display: flex);
+                    .align-items(@align: center);
+                    .time {
+                        .flex-basis(@width: 52px);
+                        width:52px;
+                        max-width:52px;
+                        font-size:12px;
+                        color:@grey;
+                    }
+                    .descr {
+                        span {
+                            position:relative; 
+                            color:@black;
+                            font-size:14px;
+                            display:inline-block;
+                            padding-left:47px;
+                            &:before {
+                                content:'';
+                                display:block;
+                                width:30px;
+                                height:30px;
+                                .rounded(50%);
+                                position:absolute;
+                                left:0px;
+                                top:-9px;
+                            }
+                        }
+                    }
+                    &__green { 
+                        .descr {
+                            span {
+                                &:before {
+                                    background:@green;
+                                }
+                            }
+                        }
+                    }     
+                    &__orange { 
+                        .descr {
+                            span {
+                                &:before {
+                                    background:@orange;
+                                }
+                            }
+                        }
+                    }  
+                    &__blue { 
+                        .descr {
+                            span {
+                                &:before {
+                                    background:@blue;
+                                }
+                            }
+                        }
+                    }  
+                    &__light_blue { 
+                        .descr {
+                            span {
+                                &:before {
+                                    background:@light_blue;
+                                }
+                            }
+                        }
+                    }  
+                }
+            }
+            &__year {                
+                .row {
+                    .flex-display(@display: flex);
+                    .justify-content(@justify: space-between);
+                    margin-bottom:19px;
+                    &:last-child {
+                        margin-bottom:0px;
+                    }
+                }
+                .item {
+                    .flex-basis(@width: 22%);
+                    width:22%; 
+                    min-width:22%;
                     .month {
                         font-size:14px;
                         color:@grey;
@@ -714,7 +798,7 @@ body {
                             vertical-align:top;
                             width:14%;
                             text-align:center;
-                            padding-bottom:4px;
+                            padding-bottom:6px;
                             .date {
                                 font-size:12px;
                                 color:@black;
@@ -732,14 +816,60 @@ body {
                                         .rounded(50%);
                                         background:@light_grey;
                                         position:absolute;
-                                        left:-10px;
+                                        //left:-10px;
+                                        left:50%;
+                                        .translate(@x:-50%);
                                         top:-8px;
                                         z-index:-1;
                                     }
                                 }
                             }
+                            .events {
+                                position: absolute;
+                                top:0px;
+                                left:11px;
+                                .event {
+                                    position:absolute;
+                                    top:-3px;
+                                    display:block;
+                                    &:nth-child(1) {
+                                        left:0px;
+                                    }     
+                                    &:nth-child(2) {
+                                        left:6px;
+                                    } 
+                                    &:nth-child(3) {
+                                        left:12px;
+                                    }                                
+                                    &__circle {
+                                        width:8px;
+                                        height:8px;
+                                        .rounded(50%);
+                                    }
+                                    &__green {                    
+                                        background:@green;                                       
+                                    }
+                                    &__orange {                    
+                                        background:@orange;
+                                    }
+                                    &__blue {                    
+                                        background:@blue;
+                                    }
+                                    &__light_blue {                    
+                                        background:@light_blue;
+                                    }
+                                    &__more {
+                                        top:-3px;
+                                        display:block;
+                                        svg {
+                                            display:block;
+                                        }
+                                    }
+                                }
+                            }
                         }
                         &__title {
+                            margin-bottom:12px;
                             .table-cell {
                                 color:@grey;
                                 font-size:12px;
