@@ -105,8 +105,21 @@ var myFunc = function(){
 		});
 	}
 
+	var userToggle = function(){
+		$('.header .nav__user .title').click(function(){
+			var parent = $(this).parent();
+			if ( parent.hasClass('act') ) {
+				parent.removeClass('act').find('.descr').hide();
+			} else {
+				parent.addClass('act').find('.descr').show();
+			}
+		});
+	}
+
 
 	$(document).ready(function(){
+		$(".scrollbar").customScrollbar();
+		userToggle();
 		rating();
 		switcher();
 		dayHeight();
