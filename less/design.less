@@ -58,19 +58,24 @@ body {
     background:#F7F7F7;
     .flex-shrink(@shrink: 0);
     padding:22px 0px;
+    &__only_logo {
+        padding:28px 0px;
+    }
     .center {
         .flex-display(@display: flex);
         .justify-content(@justify: space-between);
         .align-items(@align: center);
 
         .logo {
-            .flex-basis(@width: 21.58774373259053%); /* 310 1436 */
-            width:21.58774373259053%;
-            min-width:21.58774373259053%;
+            .flex-basis(@width: 310px); /* 310 1436 */
+            width:310px;
+            min-width:310px;
             svg {
                 display:inline-block;
                 vertical-align:middle;
                 margin-right:10px;
+                position:relative;
+                top:-3px;
             }
             span {
                 font-size: 24px;
@@ -83,9 +88,9 @@ body {
 
         .right_side {
             .flex-display(@display: flex);
-            .flex-basis(@width: 72.98050139275766%); /* 1048 1436 */
-            width:72.98050139275766%; 
-            min-width:72.98050139275766%;
+            .flex-basis(@width: 1048px); /* 1048 1436 */
+            width:1048px; 
+            min-width:1048px;
             .justify-content(@justify: space-between);
             .align-items(@align: center);
 
@@ -641,25 +646,26 @@ body {
     &__bottom {
         .calendar {
             &__days {
-                display:table;
                 width:100%;
-                .row {
-                    display:table-row;                    
+                .row {                   
                     .cell {
-                        display:table-cell;
-                        width:14%;
-                        padding-bottom:22px;
-                        padding-right:22px;
+                        float:left;
+                        width:130px;
+                        margin-bottom:22px;
+                        margin-right:23px;
                         vertical-align:top;
+                        &:last-child {
+                            margin-right:0px;
+                        }
                         .box {
                             background:@light_white;
                             min-height:90px;
                             position:relative;
-                            padding:30px 11px 0px 13px;
+                            padding:30px 11px 0px 10px;
                             .date {
                                 position:absolute;
                                 left:12px;
-                                top:10px;
+                                top:11px;
                                 color:@grey;
                                 font-size:12px;
                                 font-weight:700;
@@ -694,9 +700,9 @@ body {
                                             top:-1px;
                                         }
                                     }                                    
-                                    margin-bottom:8px;
+                                    margin-bottom:7px;
                                     &:nth-child(2) {
-                                        margin-bottom:6px;
+                                        margin-bottom:3px;
                                     }
                                     &:last-child {
                                         margin-bottom:0px;
@@ -763,8 +769,13 @@ body {
                         font-size:12px;
                         .cell {
                             padding-left:12px;
-                            padding-bottom:8px;
+                            margin-bottom:8px;
                         }                        
+                    }
+                    &:after {
+                        content:'';
+                        display:block;
+                        clear:both;
                     }
                 }
             }
