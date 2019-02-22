@@ -47,7 +47,7 @@ body {
 }
 
 .center {
-    width:100%;
+    width:1466px;
     max-width:1466px;
     padding:0px 15px;
     margin:0 auto;
@@ -166,21 +166,6 @@ body {
                                 .rounded(30px);
                                 margin-left:10px;
                                 vertical-align:middle;                                
-                                &.green {
-                                    background:@green;
-                                }
-                                &.green {                                    
-                                    background:@green;                                                           
-                                }
-                                &.orange {
-                                    background:@orange;                  
-                                }
-                                &.blue {                                    
-                                     background:@blue;                    
-                                }
-                                &.light_blue {                                    
-                                    background:@light_blue;                   
-                                }
                             }
                         }
                         .logout {
@@ -329,8 +314,7 @@ body {
                 padding-left:44px;
             }
             .day {
-                &:before {
-                    content:'';
+                i {
                     display:block;
                     width:30px;
                     height:30px;
@@ -338,26 +322,6 @@ body {
                     position:absolute;
                     left:0px;
                     top:-5px;                    
-                }
-                &__green {                    
-                    &:before {
-                        background:@green;
-                    }                                                            
-                }
-                &__orange {                    
-                    &:before {
-                        background:@orange;
-                    }                    
-                }
-                &__blue {                    
-                    &:before {
-                        background:@blue;
-                    }                    
-                }
-                &__light_blue {                    
-                    &:before {
-                        background:@light_blue;
-                    }                    
                 }
             }
             .editable_time {
@@ -538,8 +502,7 @@ body {
                     right:0px;
                     top:-5px;  
                 }
-                &:before {
-                    content:'';
+                i {
                     display:block;
                     width:30px;
                     height:30px;
@@ -547,27 +510,7 @@ body {
                     position:absolute;
                     left:0px;
                     top:-9px;
-                }
-                &__green {                    
-                    &:before {
-                        background:@green;
-                    }                                                            
-                }
-                &__orange {                    
-                    &:before {
-                        background:@orange;
-                    }                    
-                }
-                &__blue {                    
-                    &:before {
-                        background:@blue;
-                    }                    
-                }
-                &__light_blue {                    
-                    &:before {
-                        background:@light_blue;
-                    }                    
-                }
+                }                
                 &.act {
                     span {
                         &:before {
@@ -689,8 +632,7 @@ body {
                                         padding-left:21px;
                                         position:relative;
                                         display:inline-block;
-                                        &:before {
-                                            content:'';
+                                        i {
                                             display:block;
                                             width:12px;
                                             height:12px;
@@ -706,36 +648,8 @@ body {
                                     }
                                     &:last-child {
                                         margin-bottom:0px;
-                                    }
-                                    
-                                    &__green {
-                                        span {
-                                            &:before {
-                                                background:@green;
-                                            }
-                                        }                                        
-                                    }
-                                    &__orange {
-                                        span {
-                                            &:before {
-                                                background:@orange;
-                                            }
-                                        }
-                                    }
-                                    &__blue {
-                                        span {
-                                            &:before {
-                                                background:@blue;
-                                            }
-                                        }
-                                    }
-                                    &__light_blue {
-                                        span {
-                                            &:before {
-                                                background:@light_blue;
-                                            }
-                                        }
-                                    }
+                                    }                                   
+                                   
                                     &__more {
                                         padding-left:0px;
                                         &__btn {
@@ -798,8 +712,7 @@ body {
                             font-size:14px;
                             display:inline-block;
                             padding-left:47px;
-                            &:before {
-                                content:'';
+                            i {
                                 display:block;
                                 width:30px;
                                 height:30px;
@@ -926,18 +839,6 @@ body {
                                         height:8px;
                                         .rounded(50%);
                                     }
-                                    &__green {                    
-                                        background:@green;                                       
-                                    }
-                                    &__orange {                    
-                                        background:@orange;
-                                    }
-                                    &__blue {                    
-                                        background:@blue;
-                                    }
-                                    &__light_blue {                    
-                                        background:@light_blue;
-                                    }
                                     &__more {
                                         top:-3px;
                                         display:block;
@@ -1000,8 +901,7 @@ body {
                             &:last-child {
                                 margin-bottom:0px;
                             }
-                            &:before {
-                                content:'';
+                            i {
                                 display:block;
                                 width:12px;
                                 height:12px;
@@ -1009,26 +909,6 @@ body {
                                 left:0px;
                                 top:0px;  
                                 .rounded(50%);                              
-                            }
-                            &__green {                    
-                                &:before {
-                                    background:@green;
-                                }                                                            
-                            }
-                            &__orange {                    
-                                &:before {
-                                    background:@orange;
-                                }                    
-                            }
-                            &__blue {                    
-                                &:before {
-                                    background:@blue;
-                                }                    
-                            }
-                            &__light_blue {                    
-                                &:before {
-                                    background:@light_blue;
-                                }                    
                             }
                             .time {
                                 display:block;
