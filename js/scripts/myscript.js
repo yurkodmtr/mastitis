@@ -117,11 +117,25 @@ var myFunc = function(){
 	}
 
 	var disableInput = function(){
-		
+		$('.reports__system .checkbox__fixed span').click(function(){
+			if ( !$(this).closest('.checkbox').hasClass('act') ) {
+				$(this).closest('.checkbox').siblings().removeClass('act');
+				$(this).closest('.checkbox').siblings().find('input').attr('checked',false);
+				$('.input__fixed input').val('');
+				$('.input__fixed').removeClass('act');
+			}  
+		});
+
+		$('.input__fixed input').focus(function() {
+			$(this).parent().siblings().removeClass('act').find('input').val('');
+			$('.reports__system .checkbox__fixed').removeClass('act');
+			$('.reports__system .checkbox__fixed input').attr('checked',false);
+		});
 	}
 
 
 	$(document).ready(function(){
+		disableInput();
 		$(".scrollbar").customScrollbar();
 		userToggle();
 		rating();
