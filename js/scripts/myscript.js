@@ -116,6 +116,10 @@ var myFunc = function(){
 		});
 	}
 
+	var disableInput = function(){
+		
+	}
+
 
 	$(document).ready(function(){
 		$(".scrollbar").customScrollbar();
