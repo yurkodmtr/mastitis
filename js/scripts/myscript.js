@@ -13,6 +13,13 @@ var myFunc = function(){
 	}
 
 	var inputLabel = function(){
+
+		$('.input input').each(function(){
+			if ( $(this).val() !== '' ) {
+				$(this).parent().addClass('act');
+			}
+		});
+
 		$('.input').click(function(){
 			if ( !$(this).hasClass('act') ) {
 				$(this).addClass('act').find('input').focus();

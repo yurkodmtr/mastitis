@@ -16,6 +16,7 @@
 
 html, body {
     height: 100%;
+    cursor:default;
 }
 
 body { 
@@ -609,7 +610,7 @@ body {
                                 position:absolute;
                                 left:12px;
                                 top:11px;
-                                color:@grey;
+                                color:@black;
                                 font-size:12px;
                                 font-weight:700;
                                 &__disabled {
@@ -1515,6 +1516,12 @@ body {
     width:450px;
     .form {
         text-align:left;
+        .help-block-error {
+            font-size:14px;
+            line-height:16px;
+            color:@red;
+            padding-top:5px;
+        }
         &__title {
             font-size:18px;
             color:@black; 
@@ -1529,8 +1536,13 @@ body {
             .forgot {
                 float:left;
                 color:@red;
+                font-size:18px;
             }
             .submit {
+                font-size:18px;
+                background:none;
+                border:none;
+                outline:none;
                 float:right;
                 color:@red;
                 .opacity(0.3);
@@ -1552,6 +1564,9 @@ body {
                 cursor:pointer;
                 color:@red;
                 font-size:18px;
+                background:none;
+                border:none;
+                outline:none;
             }
         }
         .input {
@@ -1605,6 +1620,10 @@ body {
 ._hide {
     display:none!important;
 }
+
+.cursor_pointer {
+    cursor:pointer;
+} 
 
 @media screen and (max-width: 1450px) and (min-width: 980px) {
 
